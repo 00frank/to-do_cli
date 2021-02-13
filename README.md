@@ -33,10 +33,10 @@ Comando | Parametros | Descripción
 **crear** | descripcion | Crea una nueva tarea
 \- | estado=false | 
 **listar** |  | Lista todas las tareas y sus estados
-**actualizar** | descripcion | Actualiza el estado de las tareas
+**actualizar** | descripcion | Actualiza el estado de las tarea indicada
 \- | estado=true | 
-**borrar** | descripcion | Elimina una tarea de la lista
-**limpiar** | cuales | Limpia todas las tareas indicando cuales
+**borrar** | descripcion | Elimina la tarea de la lista
+**limpiar** | cuales | Limpia las tareas indicando cuales
 
 -----
 
