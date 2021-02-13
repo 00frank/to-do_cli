@@ -13,7 +13,7 @@ var borrarCual = argv.cuales
 
 switch (comando) {
   case "crear":
-    if (descripcion.length > 1) return console.log("La descripción es muy corta!");
+    if (descripcion.length < 1) return console.log("La descripción es muy corta!");
     let nuevaTarea = tareas.crear(descripcion, estado)
     console.log(`Tarea creada! ${(nuevaTarea.descripcion).green}\nEstado: ${nuevaTarea.estado ? "Terminado".green : "Pendiente".yellow}`);
     break;
