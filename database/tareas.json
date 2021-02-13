@@ -1,4 +1,1 @@
-[
-  { "descripcion": "pasear al perro", "estado": true },
-  { "descripcion": "subir proyecto a github", "estado": false }
-]
+[{"descripcion":"pasear al perro","estado":true},{"descripcion":"subir proyecto a github","estado":false}]
