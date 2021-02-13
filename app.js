@@ -13,6 +13,7 @@ var borrarCual = argv.cuales
 
 switch (comando) {
   case "crear":
+    if (descripcion.length > 1) return console.log("La descripción es muy corta!");
     let nuevaTarea = tareas.crear(descripcion, estado)
     console.log(`Tarea creada! ${(nuevaTarea.descripcion).green}\nEstado: ${nuevaTarea.estado ? "Terminado".green : "Pendiente".yellow}`);
     break;
@@ -27,8 +28,10 @@ switch (comando) {
     break;
   case "actualizar":
     let tareaActualizada = tareas.actualizar(descripcion, estado)
-    console.log("Tarea actualizada!");
-    console.log(`${tareaActualizada.descripcion} (${tareaActualizada.estado? "Finalizada".green : "Pendiente".yellow})`);
+    if (tareaActualizada) {
+      console.log("Tarea actualizada!");
+      console.log(`${tareaActualizada.descripcion} (${tareaActualizada.estado ? "Finalizada".green : "Pendiente".yellow})`);
+    }
     break;
   case "borrar":
     let borrado = tareas.borrar(descripcion)
@@ -38,7 +41,7 @@ switch (comando) {
     tareas.limpiar(borrarCual)
     break;
   default:
-    if (!comando) return console.log("Porfavor ingrese un comando diponible: crear | listar | actualizar | borrar");
+    if (!comando) return console.log("Porfavor ingrese un comando diponible: crear | listar | actualizar | borrar | limpiar");
     console.log(`No se encontro una definición para el siguiente comando: ${comando}`);
 }
 

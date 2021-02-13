@@ -5,7 +5,7 @@ const argv = require('yargs')
     { ...def_options, estado: { default: true, alias: 'e', desc: 'Estado de la tarea: true/false' } })
   .command('listar', 'Imprime todas las tareas por consola, mostrando su estado')
   .command('borrar', 'Elimina la tarea según la descripción recibida', { descripcion: { demand: true, alias: 'd', desc: 'Descripcion de la tarea' } })
-  .command('limpiar','Elimina todas las tareas o las finalizadas', {cuales: {demand: true, alias: 'c'}})
+  .command('limpiar','Elimina todas las tareas/las finalizadas/las pendientes', {cuales: {demand: true, alias: 'c', desc: 'opt: todas | terminadas | pendientes '}})
   .help()
   .argv
 
